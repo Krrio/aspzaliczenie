@@ -1,0 +1,16 @@
+﻿@model Egzamin2023.Models.NoteViewModel
+
+@{
+    ViewData["Title"] = "Szczegóły";
+}
+
+<h1>@ViewData["Title"]</h1>
+<div>
+    <h3>@Model.Title</h3>
+    @foreach (var line in @Model.Content.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None))
+    {
+        <p>@line</p>
+    }
+    <p>Deadline: @Model.DeadLine.ToString("g")</p>
+</div>
+<a asp-action="Index">Powrót do listy notatek</a>

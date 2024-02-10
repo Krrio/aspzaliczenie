@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿// Kacper Jóźwik 14502
+
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Egzamin2023.Models;
 

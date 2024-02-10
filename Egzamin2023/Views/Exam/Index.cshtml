@@ -1,0 +1,18 @@
+﻿@model List<Egzamin2023.Models.NoteViewModel>
+
+@{
+    ViewData["Title"] = "Lista notatek";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<ul>
+    @foreach (var note in Model)
+    {
+        <li>
+            <a asp-controller="Exam" asp-action="Details" asp-route-title="@note.Title">
+                @Html.DisplayFor(modelItem => note.Title)
+            </a>
+        </li>
+    }
+</ul>
